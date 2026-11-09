@@ -8,8 +8,11 @@
     "dev": "node --watch src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write",
-    "format:check": "prettier --check ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:generate": "drizzle-kit generate --config drizzel.config.js",
+    "db:migrate": "drizzle-kit migrate --config drizzel.config.js",
+    "db:studio": "drizzle-kit studio --config drizzel.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +26,14 @@
   },
   "homepage": "https://github.com/yuvidew/acquisitions#readme",
   "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
     "dotenv": "^18.0.10",
+    "drizzle-orm": "^0.45.4",
     "express": "^5.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "drizzle-kit": "^0.31.11",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",

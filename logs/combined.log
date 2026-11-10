@@ -1,0 +1,2 @@
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T06:39:48.387Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:06:39:48 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T06:39:48.402Z"}

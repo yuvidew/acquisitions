@@ -16,3 +16,24 @@
 {"level":"info","message":"::1 - - [10/Nov/2026:09:19:46 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 115 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.481Z"}
 {"level":"info","message":"User signed out successfully","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.488Z"}
 {"level":"info","message":"::1 - - [10/Nov/2026:09:19:46 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 29 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.489Z"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"Request blocked by Arcjet","path":"/sign-in","reason":"BOT","service":"acquisitions-api","timestamp":"2026-11-10T09:36:04.479Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [10/Nov/2026:09:36:04 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 403 21 \"-\" \"curl/8.21.0\"","service":"acquisitions-api","timestamp":"2026-11-10T09:36:04.506Z"}
+{"ip":"::1","level":"warn","message":"Request blocked by Arcjet","path":"/sign-in","reason":"BOT","service":"acquisitions-api","timestamp":"2026-11-10T09:36:04.600Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:36:04 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 403 21 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T09:36:04.603Z"}
+{"ip":"::1","level":"warn","message":"Request blocked by Arcjet","path":"/sign-up","reason":"BOT","service":"acquisitions-api","timestamp":"2026-11-10T09:36:04.685Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:36:04 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 403 21 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T09:36:04.686Z"}
+{"ip":"::1","level":"warn","message":"Request blocked by Arcjet","method":"GET","path":"/","reason":"BOT","service":"acquisitions-api","timestamp":"2026-11-10T09:44:38.898Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:44:38 +0000] \"GET / HTTP/1.1\" 403 21 \"-\" \"curl/8.21.0\"","service":"acquisitions-api","timestamp":"2026-11-10T09:44:38.907Z"}
+{"ip":"::1","level":"warn","message":"Request blocked by Arcjet","method":"GET","path":"/api","reason":"BOT","service":"acquisitions-api","timestamp":"2026-11-10T09:44:38.957Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:44:38 +0000] \"GET /api HTTP/1.1\" 403 21 \"-\" \"curl/8.21.0\"","service":"acquisitions-api","timestamp":"2026-11-10T09:44:38.959Z"}
+{"ip":"::1","level":"warn","message":"Request blocked by Arcjet","method":"POST","path":"/api/auth/sign-in","reason":"BOT","service":"acquisitions-api","timestamp":"2026-11-10T09:44:39.048Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:44:39 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 403 21 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T09:44:39.050Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocked","method":"GET","path":"/","service":"acquisitions-api","timestamp":"2026-11-10T09:51:22.563Z","userAgent":"PostmanRuntime/2.12.2"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:51:22 +0000] \"GET / HTTP/1.1\" 403 68 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:51:22.583Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocked","method":"POST","path":"/api/auth/sign-up","service":"acquisitions-api","timestamp":"2026-11-10T09:51:41.832Z","userAgent":"PostmanRuntime/2.12.2"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:51:41 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 403 68 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:51:41.834Z"}
+{"level":"info","message":"User john-2@example.com created successfully","service":"acquisitions-api","timestamp":"2026-11-10T09:52:53.050Z"}
+{"level":"info","message":"User registered successfully: john-2@example.com","service":"acquisitions-api","timestamp":"2026-11-10T09:52:53.060Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:52:53 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:52:53.066Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T09:53:00.046Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:53:00 +0000] \"GET / HTTP/1.1\" 200 94 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:53:00.048Z"}

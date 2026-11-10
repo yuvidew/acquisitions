@@ -16,13 +16,16 @@
   },
   "scripts": {
     "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "db:generate": "drizzle-kit generate --config drizzel.config.js",
     "db:migrate": "drizzle-kit migrate --config drizzel.config.js",
-    "db:studio": "drizzle-kit studio --config drizzel.config.js"
+    "db:studio": "drizzle-kit studio --config drizzel.config.js",
+    "dev:docker": "C:\\PROGRA~1\\Git\\bin\\bash.exe ./scripts/dev.sh",
+    "prod:docker": "C:\\PROGRA~1\\Git\\bin\\bash.exe ./scripts/prod.sh"
   },
   "repository": {
     "type": "git",
@@ -57,6 +60,7 @@
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
+    "pg": "^8.23.1",
     "prettier": "^3.9.10"
   }
 }

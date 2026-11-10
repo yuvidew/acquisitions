@@ -29,7 +29,7 @@ app.use(security(generalAj));
 app.get('/', (req, res) => {
   logger.info('Hello from Acquisitions');
   res.status(200).json({
-    message: 'Hello from the server',
+    message: 'Hello from the server!',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
   });

@@ -1,0 +1,35 @@
+# Production: app only. The database is Neon Cloud (serverless Postgres) --
+# there is NO Neon Local proxy. DATABASE_URL etc. come from .env.production
+# or, preferably, from your platform's secret store.
+# Run with:  docker compose -f docker-compose.prod.yml up --build -d
+name: acquisitions-prod
+
+services:
+  app:
+    build:
+      context: .
+      target: production
+    image: acquisitions:prod
+    restart: unless-stopped
+    ports:
+      - '${PORT:-3000}:3000'
+    env_file:
+      - .env.production
+    healthcheck:
+      # TCP check, so Arcjet bot rules can't reject the probe.
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "require('net').connect(3000,'127.0.0.1').on('connect',()=>process.exit(0)).on('error',()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    volumes:
+      - app-logs:/app/logs
+
+volumes:
+  app-logs:

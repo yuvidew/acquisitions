@@ -37,3 +37,14 @@
 {"level":"info","message":"::1 - - [10/Nov/2026:09:52:53 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:52:53.066Z"}
 {"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T09:53:00.046Z"}
 {"level":"info","message":"::1 - - [10/Nov/2026:09:53:00 +0000] \"GET / HTTP/1.1\" 200 94 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:53:00.048Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T13:36:27.396Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [10/Nov/2026:13:36:27 +0000] \"GET / HTTP/1.1\" 200 96 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T13:36:27.479Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T13:36:48.440Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [10/Nov/2026:13:36:48 +0000] \"GET / HTTP/1.1\" 200 97 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T13:36:48.453Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T13:37:05.387Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [10/Nov/2026:13:37:05 +0000] \"GET / HTTP/1.1\" 200 96 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T13:37:05.400Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T13:37:57.751Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [10/Nov/2026:13:37:57 +0000] \"GET / HTTP/1.1\" 200 97 \"-\" \"PostmanRuntime/2.15.0\"","service":"acquisitions-api","timestamp":"2026-11-10T13:37:57.770Z"}
+{"level":"info","message":"User john-1@example.com created successfully","service":"acquisitions-api","timestamp":"2026-11-10T13:40:50.247Z"}
+{"level":"info","message":"User registered successfully: john-1@example.com","service":"acquisitions-api","timestamp":"2026-11-10T13:40:50.360Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [10/Nov/2026:13:40:50 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"PostmanRuntime/2.15.0\"","service":"acquisitions-api","timestamp":"2026-11-10T13:40:50.364Z"}

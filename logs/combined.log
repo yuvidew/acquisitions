@@ -1,2 +1,18 @@
 {"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T06:39:48.387Z"}
 {"level":"info","message":"::1 - - [10/Nov/2026:06:39:48 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T06:39:48.402Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-10T07:59:19.102Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:07:59:19 +0000] \"GET / HTTP/1.1\" 200 93 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-10T07:59:19.128Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:08:30:36 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 201 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T08:30:36.506Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:08:30:36 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 75 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T08:30:36.526Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:08:30:36 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 107 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T08:30:36.544Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:08:51:58 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 165 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T08:51:58.249Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:03:22 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 165 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T09:03:22.749Z"}
+{"level":"info","message":"User john@example.com created successfully","service":"acquisitions-api","timestamp":"2026-11-10T09:06:43.349Z"}
+{"level":"info","message":"User registered successfully: john@example.com","service":"acquisitions-api","timestamp":"2026-11-10T09:06:43.358Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:06:43 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 104 \"-\" \"PostmanRuntime/2.12.2\"","service":"acquisitions-api","timestamp":"2026-11-10T09:06:43.364Z"}
+{"level":"error","message":"Error authenticating the user: Error: User not found","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.461Z"}
+{"level":"error","message":"Sign in error User not found","service":"acquisitions-api","stack":"Error: User not found\n    at authenticateUser (file:///d:/devops/docker-learn/acquisitions/src/services/auth.services.js:95:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async signIn (file:///d:/devops/docker-learn/acquisitions/src/controllers/auth.controller.js:46:18)","timestamp":"2026-11-10T09:19:46.465Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:19:46 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 401 37 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.470Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:19:46 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 115 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.481Z"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.488Z"}
+{"level":"info","message":"::1 - - [10/Nov/2026:09:19:46 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 29 \"-\" \"node\"","service":"acquisitions-api","timestamp":"2026-11-10T09:19:46.489Z"}

@@ -12,6 +12,9 @@ concurrency:
   group: docker-${{ github.ref }}
   cancel-in-progress: false
 
+env:
+  IMAGE_NAME: yuvidew/kubernetes-demo-api
+
 jobs:
   build-and-push:
     name: Build and push production image
@@ -37,7 +40,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/acquisitions
+          images: ${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
             type=sha,prefix=
@@ -60,7 +63,7 @@ jobs:
 
       - name: Write summary
         env:
-          IMAGE: ${{ secrets.DOCKER_USERNAME }}/acquisitions
+          IMAGE: ${{ env.IMAGE_NAME }}
           TAGS: ${{ steps.meta.outputs.tags }}
           DIGEST: ${{ steps.build.outputs.digest }}
         run: |

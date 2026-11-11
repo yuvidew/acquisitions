@@ -59,3 +59,9 @@
 {"level":"info","message":"User john@example.com authenticated successfully","service":"acquisitions-api","timestamp":"2026-11-11T15:08:21.422Z"}
 {"level":"info","message":"User signed in successfully: john@example.com","service":"acquisitions-api","timestamp":"2026-11-11T15:08:21.427Z"}
 {"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:08:21 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 103 \"-\" \"PostmanRuntime/2.16.1\"","service":"acquisitions-api","timestamp":"2026-11-11T15:08:21.429Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-11T15:22:25.289Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:22:25 +0000] \"GET / HTTP/1.1\" 200 97 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-11T15:22:25.314Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:22:36 +0000] \"GET /api/users HTTP/1.1\" 200 343 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-11T15:22:36.567Z"}
+{"level":"info","message":"User john@example.com authenticated successfully","service":"acquisitions-api","timestamp":"2026-11-11T15:33:04.511Z"}
+{"level":"info","message":"User signed in successfully: john@example.com","service":"acquisitions-api","timestamp":"2026-11-11T15:33:04.544Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:33:04 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 103 \"-\" \"PostmanRuntime/2.16.1\"","service":"acquisitions-api","timestamp":"2026-11-11T15:33:04.548Z"}

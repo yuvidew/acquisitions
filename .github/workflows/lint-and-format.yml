@@ -1,0 +1,68 @@
+name: Lint and Format
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lint-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-format:
+    name: ESLint & Prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        id: eslint
+        continue-on-error: true
+        run: npm run lint
+
+      - name: Run Prettier check
+        id: prettier
+        continue-on-error: true
+        run: npm run format:check
+
+      - name: Annotate problems and summarize
+        if: always()
+        env:
+          ESLINT_OUTCOME: ${{ steps.eslint.outcome }}
+          PRETTIER_OUTCOME: ${{ steps.prettier.outcome }}
+        run: |
+          {
+            echo "## Lint & Format results"
+            echo ""
+            echo "| Check | Result |"
+            echo "|---|---|"
+            echo "| ESLint | ${ESLINT_OUTCOME} |"
+            echo "| Prettier | ${PRETTIER_OUTCOME} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$ESLINT_OUTCOME" != "success" ]; then
+            echo "::error title=ESLint failed::ESLint found problems. Run 'npm run lint:fix' locally to auto-fix them, then commit the changes."
+          fi
+          if [ "$PRETTIER_OUTCOME" != "success" ]; then
+            echo "::error title=Prettier failed::Some files are not formatted. Run 'npm run format' locally to fix them, then commit the changes."
+          fi
+
+      - name: Fail if any check failed
+        if: steps.eslint.outcome != 'success' || steps.prettier.outcome != 'success'
+        run: exit 1

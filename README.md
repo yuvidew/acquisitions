@@ -1,12 +1,12 @@
 # Acquisitions API – Docker setup (Neon Local for dev, Neon Cloud for prod)
 
-| | Development | Production |
-| --- | --- | --- |
-| Compose file | `docker-compose.dev.yml` | `docker-compose.prod.yml` |
-| Env file | `.env.development` | `.env.production` |
-| Database | Neon Local proxy → **ephemeral branch** of your Neon project | Neon Cloud (serverless Postgres) |
-| `DATABASE_URL` | `postgres://neon:npg@neon-local:5432/neondb` | `postgres://…neon.tech/…?sslmode=require` |
-| Docker target | `development` (hot reload, dev deps) | `production` (prod deps only, non-root) |
+|                | Development                                                  | Production                                |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------- |
+| Compose file   | `docker-compose.dev.yml`                                     | `docker-compose.prod.yml`                 |
+| Env file       | `.env.development`                                           | `.env.production`                         |
+| Database       | Neon Local proxy → **ephemeral branch** of your Neon project | Neon Cloud (serverless Postgres)          |
+| `DATABASE_URL` | `postgres://neon:npg@neon-local:5432/neondb`                 | `postgres://…neon.tech/…?sslmode=require` |
+| Docker target  | `development` (hot reload, dev deps)                         | `production` (prod deps only, non-root)   |
 
 > Neon Local's default credentials are `neon` / `npg` and database `neondb`, not `user` / `password`.
 > The production compose file contains only the app: Neon Cloud is serverless and has no container.
@@ -31,6 +31,7 @@ No URLs or secrets are hardcoded. The env files are git-ignored.
    ```
 
    `--env-file` is needed so compose can interpolate `NEON_API_KEY` etc. into the `neon-local` service.
+
 4. Run migrations against the fresh branch (the branch is new each start, so it has no tables yet):
 
    ```bash
@@ -60,16 +61,16 @@ Source in `src/` is bind-mounted and `node --watch` reloads on change.
 
 ## npm shortcuts
 
-| Script | Does |
-| --- | --- |
-| `npm run docker:dev` | Build and start app + Neon Local (foreground) |
-| `npm run docker:dev:detach` | Same, in the background |
+| Script                       | Does                                            |
+| ---------------------------- | ----------------------------------------------- |
+| `npm run docker:dev`         | Build and start app + Neon Local (foreground)   |
+| `npm run docker:dev:detach`  | Same, in the background                         |
 | `npm run docker:dev:migrate` | Run Drizzle migrations in the dev app container |
-| `npm run docker:dev:logs` | Follow dev logs |
-| `npm run docker:dev:down` | Stop dev stack (deletes the ephemeral branch) |
-| `npm run docker:prod` | Build and start the production app (detached) |
-| `npm run docker:prod:logs` | Follow production app logs |
-| `npm run docker:prod:down` | Stop the production app |
+| `npm run docker:dev:logs`    | Follow dev logs                                 |
+| `npm run docker:dev:down`    | Stop dev stack (deletes the ephemeral branch)   |
+| `npm run docker:prod`        | Build and start the production app (detached)   |
+| `npm run docker:prod:logs`   | Follow production app logs                      |
+| `npm run docker:prod:down`   | Stop the production app                         |
 
 ## Files
 

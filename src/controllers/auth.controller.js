@@ -67,7 +67,10 @@ export const signIn = async (req, res, next) => {
   } catch (error) {
     logger.error('Sign in error', error);
 
-    if (error.message === 'User not found' || error.message === 'Invalid password') {
+    if (
+      error.message === 'User not found' ||
+      error.message === 'Invalid password'
+    ) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
 

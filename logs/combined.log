@@ -48,3 +48,14 @@
 {"level":"info","message":"User john-1@example.com created successfully","service":"acquisitions-api","timestamp":"2026-11-10T13:40:50.247Z"}
 {"level":"info","message":"User registered successfully: john-1@example.com","service":"acquisitions-api","timestamp":"2026-11-10T13:40:50.360Z"}
 {"level":"info","message":"::ffff:172.21.0.1 - - [10/Nov/2026:13:40:50 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"PostmanRuntime/2.15.0\"","service":"acquisitions-api","timestamp":"2026-11-10T13:40:50.364Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-11-11T15:02:10.211Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:02:10 +0000] \"GET / HTTP/1.1\" 200 97 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.145.2 Chrome/150.0.7871.250 Electron/43.8.3 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-11-11T15:02:10.221Z"}
+{"level":"info","message":"User john-1@example.com created successfully","service":"acquisitions-api","timestamp":"2026-11-11T15:06:51.002Z"}
+{"level":"info","message":"User registered successfully: john-1@example.com","service":"acquisitions-api","timestamp":"2026-11-11T15:06:51.073Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:06:51 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"PostmanRuntime/2.16.1\"","service":"acquisitions-api","timestamp":"2026-11-11T15:06:51.079Z"}
+{"level":"error","message":"Error creating the user: Error: User with this email already exists","service":"acquisitions-api","timestamp":"2026-11-11T15:07:52.059Z"}
+{"level":"error","message":"Signup error User with this email already exists","service":"acquisitions-api","stack":"Error: User with this email already exists\n    at createUser (file:///app/src/services/auth.services.js:72:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async signup (file:///app/src/controllers/auth.controller.js:10:18)","timestamp":"2026-11-11T15:07:52.066Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:07:52 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 409 31 \"-\" \"PostmanRuntime/2.16.1\"","service":"acquisitions-api","timestamp":"2026-11-11T15:07:52.071Z"}
+{"level":"info","message":"User john@example.com authenticated successfully","service":"acquisitions-api","timestamp":"2026-11-11T15:08:21.422Z"}
+{"level":"info","message":"User signed in successfully: john@example.com","service":"acquisitions-api","timestamp":"2026-11-11T15:08:21.427Z"}
+{"level":"info","message":"::ffff:172.21.0.1 - - [11/Nov/2026:15:08:21 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 103 \"-\" \"PostmanRuntime/2.16.1\"","service":"acquisitions-api","timestamp":"2026-11-11T15:08:21.429Z"}
